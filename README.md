@@ -2,6 +2,8 @@
 
 Ejemplo simple de un entorno de integración continua, utilizando un repositorio de GitHub conectado a un servidor de integración continua (CircleCI) y un entorno de entrega (Vercel).
 
+[.cicd.png]
+
 ## Tecnologías/Servicios utilizados
 
 * VisualStudio Code (IDE)
