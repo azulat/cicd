@@ -1,0 +1,41 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: cimg/node:20.0.0
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Run Unit Tests
+          command: npm run test
+
+  deploy:
+    docker:
+      - image: cimg/node:20.0.0
+    steps:
+      - checkout
+      - run:
+          name: Install Vercel CLI
+          command: npm install -g vercel
+      - run:
+          name: Deploy to Vercel
+          command: vercel --prod --yes --token=$VERCEL_TOKEN
+
+workflows:
+  version: 2
+  ci_cd_workflow:
+    jobs:
+      - test:
+          filters:
+            branches:
+              only: main
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only: main
