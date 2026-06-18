@@ -10,6 +10,8 @@ Ejemplo simple de un entorno de integración continua, utilizando un repositorio
 * Antigravity CLI (Agente IA)
 * React (Framework JavaScript)
 * Vite (Herramienta de construcción)
+* Git (Control de versiones)
+* GitHub (Repositorio remoto)
 * Vitest (Framework de pruebas unitarias)
 * CircleCI (Plataforma de CI/CD)
 * Vercel (Plataforma de hosting)
