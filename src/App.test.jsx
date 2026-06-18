@@ -9,7 +9,6 @@ describe('App', () => {
     const heading = screen.getByRole('heading', { level: 1 });
     const text = heading.textContent;
 
-    // Chequeamos que el contenido empiece con una letra mayúscula
     expect(text.charAt(0)).toMatch(/^[A-Z]/);
   });
 });
